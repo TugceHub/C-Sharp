@@ -26,3 +26,4 @@ C:\Users\blutf\OneDrive\Documents\Visual Studio 2022\C-SARP 101\ConsoleApp2\obj\
 C:\Users\blutf\OneDrive\Documents\Visual Studio 2022\C-SARP 101\ConsoleApp2\obj\Debug\net6.0\ConsoleApp2.pdb
 C:\Users\blutf\OneDrive\Documents\Visual Studio 2022\C-SARP 101\ConsoleApp2\obj\Debug\net6.0\ConsoleApp2.genruntimeconfig.cache
 C:\Users\blutf\OneDrive\Documents\Visual Studio 2022\C-SARP 101\ConsoleApp2\obj\Debug\net6.0\ref\ConsoleApp2.dll
+C:\Users\blutf\OneDrive\Documents\Visual Studio 2022\C-SARP 101\ConsoleApp2\obj\Debug\net6.0\ConsoleApp2.sourcelink.json
