@@ -1,158 +1,272 @@
-﻿// DÖNGÜLER
-
-//Belirtişen işlemlerin belli şartlar aralığında tekrar tekrar gerçekleşmesidir.
-// ornegün 100 defa merhaba dünya yazdırmak gibi
-// 1000 tane personel için numara atamak
-
-/* DÖNGÜ TÜRLERİ
- *  1. FOR
- *  2. WHILE
- *  3. DO-WHILE
- *  4. FOREACH 
-  */
-
-/* For Dongüsü syntax yapısı
- *  for( başlangıç; bitiş; miktar)
- *             {
- *         işlemler
- *             }
- */
-
-// Örnek For Döngüsü Kullanımı 1
+﻿// DİZİLER
 /*
-int i;
-for(i=1; i<10; i++)
+ * Dizilerde her eleman data, her elemanın konumu ise index olarak adlandırılır.
+ * Dizilerde sayma işlemi 0'dan başlar.
+ * Diziler ram bellekte tutulurlar.
+ * Dizi tanımlama işlemleri [] sembolü ile yapılır.
+ * Dizi tanımlamalarında elemanler {} sembolü içerisine yazılır.
+ * Dizi tanımlamalrında ilgili dizinin mutlaka bir değişen türü bulunur.
+ */
+
+// mutlaka bir değişken türü almak zorunda 
+// hemen sonra köşeli parantez alırlar
+//  string[] sehirler = { "adana", "mersin", "giresun", "ankara" };
+// 4 elemanlı bir dizi oluşturduk ancak index 0 dan başlar bu yüzden 
+/*  index değ
+ * 0 = adana        1.eleman
+ * 1 = mersin       2.eleman
+ * 2 = giresun      3.eleman
+ * 3 = ankara       4.eleman
+ */
+
+//   Console.Write("Dizimizin 2.Index Değeri : " + sehirler[2]);
+// [] -> içerisindeki değer o sıradaki Index değerini verir.
+// [2] -> index 2 yani 3. eleman bu da bizim dizimzde giresun çıktısı verir.
+
+//   Console.WriteLine("Dizimzin 0.Indax Değeri : " +  sehirler[0]);
+// Çıktımız adana
+
+// index değerlerinin dışına çıkarsam Hata verir. Ör:
+//   Console.Write(sehirler[5]);
+
+
+// Int Türünde Dizi Örnekleri
+
+//int[] sayilar = { 10, 20, 30, 40, 50, 60, 70 };
+//Console.WriteLine(sayilar[4]);
+// output : 50
+
+// Dizinin tüm elemanlarını yazdırmak istersem :
+//for (int i = 0; i < 7; i++)
+//{
+//    Console.WriteLine(sayilar[i]);  
+//}
+/*
+ * int i = index 0 dan başladığı için 0
+ * i < 7 = çünkü dizi index sayısı 6 eğer i<= 7 deseydim HATA alırıdım. 
+ * i++ = 1 arsın istediğim için 
+ */
+
+
+// Dizilerle Beraber Karar Yapısı Kullanımı
+
+//int[] sayilar = { 10, 20, 30, 40, 50, 60, 70, 80, 90 };
+//for (int i = 0; i < sayilar.Length; i++)
 {
-    Console.WriteLine("merhaba dünya");
-} */
-// BREAK POINT KULLANIMI
-// break point  gri kısıma tıkadığında kırmızı nokta oluştururç
-// kullanım amacı hata aldığım noktalarda programı adım adım takip etmemi sağlar.
-// f5 ile çalıştır sonra f11 ile takip et
+    //if (sayilar[i] % 20 == 0) // sayilar dizisinde 20 ye tam bölünen elemanları bulmak 
+    //{ 
+    //Console.WriteLine(sayilar[i]);
+    //}
 
-// Örnek For Döngüsü Kullanımı 2
+    //if (sayilar[i] % 20 == 0 && sayilar[i] % 30 == 0)
+    //{
+    //    Console.WriteLine(sayilar[i]);
+    //}
+    //// output : 60   -> && (VE)
 
-// EKRANA 1-10 KADAR SAYI YAZDIR.
+    //if (sayilar[i] % 20 == 0 || sayilar[i] % 30 == 0)
+    //{
+    //    Console.WriteLine(sayilar[i]);
+    //}
+    //// output : 20 30 40 60 80 90    -> || (VEYA)
+}
+// sayilar.Length : dizi adı. uzunluğu otomatik veririr
 
-//int sayi;
-//for (sayi = 1; sayi <= 10; sayi++)
+
+// Length Komutu Kullanımı
+
+//string[] kisiler = { "fatma", "tugce", "basak", "metehan", "burce" };
+//for (int i = 0; i < kisiler.Length; i++)
 //{
-//    Console.WriteLine(sayi);
+//    Console.WriteLine(kisiler[i]);  
 //}
+/*
+ * kisiler dizisinde ındex sayısı 4 bu yüzden for döngüsüne i < 5 ; yazarsam da olur.
+ * ancak çok büyük değerlerde bunu sayamam. Bu yüzden i < kisiler.Length; yazmalıyım.
+ * i < kisiler.Length; : kişler dizisinin uzunluğu demektir.
+ */
 
-// 0 ile 20 arası çift sayılar
+//Console.WriteLine(kisiler.Length); 
+//// kisiler dizisinin uzunluğunu yazar.
+//// output : 5 
 
-//int j;
-//for ( j = 0; j <=20; j+=2 )
-//{
-//    Console.WriteLine( j ); 
-//}
 
-//int k;
-//for ( k = 1; k <= 100; k += 1)
-//{
-//    Console.WriteLine(k +"Merhaba İstanbul");
-//}
+// Dizilerde Toplama İşlemi 
 
-// Döngü İçinde Karar Yapısı Kullanımı
-
-// 0 ile 20 arası çift sayılar
-
-//int sayi, cift;
-//for (sayi = 0; sayi <= 20; sayi++) {
-//    cift = sayi% 2;
-//    if (cift == 0) {
-//        Console.WriteLine(sayi);
-//    }
-//}
-
-// Algoritmik Soru Girilen Sayının Pozitif Tam Bölenlerini Bulma
-
-//int sayi;
-//Console.WriteLine("sayıyı giriniz :");
-//sayi = Convert.ToInt32(Console.ReadLine());
+/*
+ *  toplama işleme += yaklaşımı ile gerçekleşir.
+ *  başlangışta ilk değeri 0 olan bir toplam değişkeni tanımlanır.
+ *  toplam değişkenin son değerin üzerine, ilgili indexte bulnan değer eklenir
+ *  
+ *  dizi []{ 10, 20, 30, 40, 50, 60, 70, 80, 90, 100}
+ *  index :  0    1   2   3   4   5   6   7   8    9   
+ *  Başlangıç : toplam = 0
+ *  adım 1 : 0 + 10 = 10
+ *  adım 2 : 10 + 20 = 30
+ *  adım 3: 30 + 30 = 60
+ *  adım 4 : 60 + 40 = 100
+ *  adım 5 : 100 + 50 = 150
+ *         : toplamın son değeri + index değeri 
+ */
+//Console.WriteLine("Dizilerde Toplama İşlemi");
 //Console.WriteLine();
-//Console.WriteLine("Sayının Tam bölenleri :");
-//for (int i = 1; i <=sayi; i++)
+//int[] sayilar = { 10, 20, 30, 40, 50, 60, 70, 80, 90, 100 };
+//int toplam = 0; 
+//for (int i = 0; i < sayilar.Length; i++)
 //{
-//    if ( sayi % i == 0)
+//    toplam += sayilar[i];
+//    Console.WriteLine(toplam);// * AŞAMALARI YAZDIRIR
+//}
+//Console.Write("TOPLAM : "); // * SONUCU YAZDIRIR
+//Console.WriteLine(toplam);
+///* OUTPUT : 
+// * 10 
+// * 30 
+// * 60 
+// * 100 
+// * 150 
+// * 210 
+// * 280 
+// * 360 
+// * 450 
+// * 550  
+// ** TOPLAM: 550
+// */
+
+
+// Dizi Metotları 
+/*
+ * SHORT    : Diziyi küçükten büyüğe sıralar.
+ * REVERSE  : Diziyi tersten yazdırır.
+ * INDEX OF : Aranan değerin index sırasını döndürür.
+ * MAX      : Dizideki en büyük elemanı verir.
+ * MİN      : Dizideki en küçük elemanı verir
+ * LENGTH   : Dizinin boyutunu verir.
+ */
+
+// SHORT Metodu
+//int[] sayilar = { 20, 14, 12, 35, 13 };
+//Array.Sort(sayilar);
+//for (int i = 0; i < sayilar.Length; i++)
+//{
+//    Console.WriteLine(sayilar[i]);
+//}
+///* Output :
+//12
+//13
+//14
+//20
+//35
+// */
+
+// REVERSE Metodu
+
+//string[] sehirler = { "mersin", "giresun", "ankara", "melbourne","istanbul", "sanfrancisco"  };
+//Array.Reverse(sehirler);
+//for (int i = 0; i < sehirler.Length; i++)
+//{
+//    Console.WriteLine(sehirler[i]);
+//}
+///* OUTPUT :
+//sanfrancisco
+//istanbul
+//melbourne
+//ankara
+//giresun
+//mersin
+//*/
+
+//string[] sehirler = { "mersin", "giresun", "ankara", "melbourne", "istanbul", "sanfrancisco" };
+//Array.Sort(sehirler);
+//Array.Reverse(sehirler);
+//for (int i = 0; i < sehirler.Length; i++)
+//{
+//    Console.WriteLine(sehirler[i]);
+//}
+///* output:
+//sanfrancisco
+//mersin
+//melbourne
+//istanbul
+//giresun
+//ankara
+//*/
+
+// İNDEX OF Metodu
+
+//string[] kisiler = { "fatma", "tugce", "basak", "metehan", "burce" };
+//int sıra;
+//sıra = Array.IndexOf( kisiler, "basak");
+//Console.WriteLine(sıra);
+
+//// output : 2
+
+//string[] kisiler = { "fatma", "tugce", "basak", "metehan", "burce" };
+//int sıra;
+//Array.Sort(kisiler);
+//sıra = Array.IndexOf(kisiler, "basak");
+//Console.WriteLine(sıra);
+
+//// output : 0
+
+// MİN - MAX Metotları
+
+//int[] sayilar = { 76, 43, 12, 56, 34 };
+//Console.WriteLine( "en küçük sayı : " + sayilar.Min());
+//Console.WriteLine("en büyük sayı : " + sayilar.Max());
+//// output :
+//// en küçük sayı : 12
+//// en büyük sayı : 76
+
+// Foreach Döngüsü
+/*
+ * Dizilerle beraber kullanılan döngü türüdür.
+ * 4 temel parametersi vardır.
+ *  1: değişken türü -> dizinin değişken türü ile aynı olmak zorunda
+ *  2: değişken adı
+ *  3: in (içinde) komutu
+ *  4: dizi adı
+ */
+
+//string[] sehirler = { "ankara", "adana", "bursa", "izmir" };
+//foreach (string s in sehirler)
+//{
+//    Console.WriteLine(s);
+//}
+//// s değişkeni sırasıyla dizinin elemanların üzerine çekiyor
+//// extran boyut bildirmiyoruz kendisi otomatik duruyor
+
+// Foreach Döngüsü ve Aritmetik İşlemler
+
+//int[] sayilar = { 23, 55, 32, 16, 89, 70 };
+//int toplam = 0;
+//foreach(int x in sayilar)
+//{
+//    toplam = toplam + x;
+//}
+//Console.WriteLine( "Toplam: " + toplam);
+
+//int[] sayilar = { 34, 22, 11, 67, 89, 50 };
+//int toplam = 0;
+//foreach (int i in sayilar)
+//{
+//    if (i % 2 == 0)
 //    {
-//        Console.WriteLine(i);
+//     Console.WriteLine(i);
 //    }
 //}
+//Array.Sort(sayilar); // -> odev 
 
-// Algoritmik Mülakat Sorusu
+// Diziye Klavyeden Değer Girişi
 
-/* Bir bakteri türü her saatin sonunda kendini 2 ye bölerek çoğalmaktadır.
- * Yeni oluşan bakterilerde aynı şekilde çoğalmaktadır.
- * 24 saatin sonunda kaç bakteri olur?  */
-
-//int bakteri = 1;
-//for (int i = 1 ; i <= 24; i++) {
-//    bakteri = bakteri * 2;
-//    Console.Write("SAAT :" + " " + i);
-//    Console.WriteLine(bakteri);
-
+//string[] sehirler = new string[5];
+//for (int i = 0; i < 5; i++)
+//{ 
+//    Console.WriteLine( "Şehir isimi : ");
+//    sehirler[i] = Console.ReadLine();
 //}
-//Console.Write("24 SAATİN SONUNDA OLUŞAN BAKTERİ SAYISI : ");
-//Console.WriteLine(bakteri);
-
-// Ardışık Sayılarla İşlemler
-
-// 5 Faktöriyel 
-//int faktoriyel = 1;
-//for (int i = 5; i >= 0; i--)
+//for(int f = 0; f< 5; f++)
 //{
-//    faktoriyel = faktoriyel * i;
-//    //Console.WriteLine(faktoriyel); -> aşamaları gosterir
+//    Console.WriteLine();    
+//    Console.WriteLine(sehirler[f] );    
 //}
-//Console.WriteLine(faktoriyel);  // sonucu gosterir.
-
-/* odev
- * klavyeden girilen sayının faktoriyelini hesaplayan uygulama
- * dongunun başlangıc değerleri buyukten kucuge değl de kucukten buyuğe olmalı.
- */
-
-// While Döngüsü
-
-// syntax yapısı:
-/*      While(şart)
- *          {
- *       işlemler
- *          }
- */
-// Özellikle veri tabanından veri çekmede çokca kullanılan bir özelliktir.
-
-//int sayac = 1;
-//while (sayac <= 10)
-//{
-//    Console.WriteLine("Fatma Tugce BULUT");
-//    sayac++;
-//}
-
-// Do While Döngüsü
-// While döngüsünde şart gerçekleşmezse çıktı alınmaz ancak dı whşle da 1 kere de olsa şart gerçekleşir.
-
-// Do - While döngüsü syntax yapısı:
-/*      Do
- *      {
- *      işlemler
- *      }
- *      While( Şart ); // şart sağlanamzsa işlemden çıkıcak bu yüzden ";" önemli.
- */
-
-//int sayi;
-//sayi = 1;
-//while (sayi <= 10)
-//{
-//    Console.WriteLine(sayi);
-//    sayi++;
-//}
-
-//int sayi = 12;
-//do
-//{
-//    Console.WriteLine(sayi);
-//    sayi++;    
-
-//} while ( sayi <= 10);
