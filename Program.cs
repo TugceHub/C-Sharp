@@ -1,65 +1,34 @@
-﻿// Metin Belgesi İşlemleri
-/*
- * Çeşitli belge türlerinin ( metin belgesi, word, excel ..vb.)
- * Dosya işlemleri sayesinde kodlar üzerşnden metin belgesi oluşturabilir, yazabilr, silebilir veya değiştirebiliriz.
- * Dosya işlemleri aslında bşr veri tabanıdır.
- */
+﻿// 2 Boyutlu Dizi Uygulaması
 
-// Metin Belgesi işlemleri için kullandığımız kütüphane : System.IO
+//Çok boyutlu dizilier
+//int [,] sayilar = new int[2, 3]; // [satır, sütun];
+//sayilar[0, 0] = 10;
+//sayilar[0, 1] = 20;
+//sayilar[0, 2] = 25;
+//sayilar[1, 0] = 30;
+//sayilar[1, 1] = 40;
+//sayilar[1, 2] = 45;
+//Console.WriteLine(sayilar[0,1]);
 
+// Yıldız Şekli Oluşturma
 
-// Yeni Metin Belgesi Oluşturma
-//class Program
+// Yıldızlarla Dikdörtgen Çizdirme
+//for (int i = 1; i <= 10; i++)
 //{
-//    static void Main(String[] args)
-//    {
-//        StreamWriter sw = new StreamWriter("C:\\Users\\blutf\\OneDrive\\Desktop\\fatma.txt");
-//    }
+//    Console.WriteLine("*****");
 //}
 
-// Yeni Metin Belgesi İçine Yazı Yazma
+// Yıldızlarla Dik Üçgen Oluşturma
 
-//class Program
+//for (int i = 1; i<=5; i++)
 //{
-//    static void Main(String[] args)
+//    for (int y = 1; y <= i; y++)
 //    {
-//        StreamWriter sw = new StreamWriter("C:\\Users\\blutf\\OneDrive\\Desktop\\fatma.txt");
-//        sw.WriteLine("lorem ipsum lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum" );
-//        sw.Close();
+//        Console.Write("*");
 //    }
+//    Console.WriteLine();
 //}
 
 
-// Metin Belgesi İçine Klavyeden Veri Girişi
 
-//class Program
-//{
-//    static void Main(String[] args)
-//    {
-//        StreamWriter sw = new StreamWriter("C:\\Users\\blutf\\OneDrive\\Desktop\\fatmaB2.txt");
-//        string metin;
-//        Console.WriteLine("Metini giriniz : ");
-//        metin = Console.ReadLine();
-//        sw.Write(metin);
-//        sw.Close();
-//    }
-//}
 
-// Metin Belgesini Okuma
-
-class program
-{
-    static void Main(string[] args)
-    {
-        FileStream fs = new FileStream("adres", FileMode.Open, FileAccess.Read);
-        StreamReader sr = new StreamReader(fs);
-        string metin = sr.ReadLine();
-        while (metin != null)
-        {
-            Console.WriteLine(metin);
-            metin = sr.ReadLine();
-
-        }
-        sr.Close();
-        fs.Close();
-    }
