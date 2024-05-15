@@ -1,34 +1,146 @@
-﻿// 2 Boyutlu Dizi Uygulaması
+﻿
+//        // Hata Yönetimi 
 
-//Çok boyutlu dizilier
-//int [,] sayilar = new int[2, 3]; // [satır, sütun];
-//sayilar[0, 0] = 10;
-//sayilar[0, 1] = 20;
-//sayilar[0, 2] = 25;
-//sayilar[1, 0] = 30;
-//sayilar[1, 1] = 40;
-//sayilar[1, 2] = 45;
-//Console.WriteLine(sayilar[0,1]);
-
-// Yıldız Şekli Oluşturma
-
-// Yıldızlarla Dikdörtgen Çizdirme
-//for (int i = 1; i <= 10; i++)
+//class Program
 //{
-//    Console.WriteLine("*****");
-//}
-
-// Yıldızlarla Dik Üçgen Oluşturma
-
-//for (int i = 1; i<=5; i++)
-//{
-//    for (int y = 1; y <= i; y++)
+//    static void Main(string[] args)
 //    {
-//        Console.Write("*");
+//        try
+//        {
+//            int s1, s2, crs;
+//            Console.WriteLine("Sayı : ");
+//            s1 = Convert.ToInt16(Console.ReadLine());
+//            Console.WriteLine("Sayı : ");
+//            s2 = Convert.ToInt16(Console.ReadLine());
+//            crs = s1 + s2;
+//            Console.WriteLine("Sonuc  :" + crs);
+
+//        }
+//        catch
+//        {
+//            Console.WriteLine("Hata var formatınızı düzeltin ");
+//        }
+
 //    }
-//    Console.WriteLine();
 //}
 
 
+// Exception Kullanımı
+
+//class Program
+//{
+//    static void Main(string[] args)
+//    {
+//        try
+//        {
+//            int s1, s2, crs;
+//            Console.WriteLine("Sayı : ");
+//            s1 = Convert.ToInt16(Console.ReadLine());
+//            Console.WriteLine("Sayı : ");
+//            s2 = Convert.ToInt16(Console.ReadLine());
+//            crs = s1 + s2;
+//            Console.WriteLine("Sonuc  :" + crs);
+
+//        }
+//        catch (Exception ex)  // hatayı soyler
+//        {
+//            Console.WriteLine("Hata var formatınızı düzeltin ");
+//            Console.WriteLine(ex);
+//        }
+
+//    }
+//}
 
 
+// Özel Durum Formatları
+/*
+ * Invalid Cast Exception: Tür dönüştürme işlemlerinde tanımlanan değişkenlere göre farklı bir türde dönüşüm yapılması durumunda karşımıza çıkan hata mesajıdır.
+ * Index Out Of Range Exception: Dizide bulunmayan değerler ile karşılaşınca oluşan hata mesajıdır.
+ * Divided By Zero: Sıfıra bölme yapılmak istenildiği zaman oluşan hata mesajıdır.
+ * Format Exception: Sayısal bir alana sayısal olmayan bir değer girilmesi durumunda oluşan hata mesajıdır.
+ * Overflow Exception: Bir değişkenin aralıklarının dışına çıkılması durumunda karşılaşılan hata mesajıdır.
+ * Argument Null Exception: Aritmetik bir alanın boş bırakılması durumunda karşıma çıkan hata mesajıdır.
+ * Arithmetic Exception: Matematiksel hatalarda oluşan hata mesajıdır.1
+ */
+
+//Format Exception
+
+//class Program
+//{
+//    static void Main(string[] args)
+//    {
+//        try
+//        {
+//            int s1, s2, crs;
+//            Console.WriteLine("Sayı : ");
+//            s1 = Convert.ToInt16(Console.ReadLine());
+//            Console.WriteLine("Sayı : ");
+//            s2 = Convert.ToInt16(Console.ReadLine());
+//            crs = s1 + s2;
+//            Console.WriteLine("Sonuc  :" + crs);
+
+//        }
+//        catch (FormatException) 
+//        {
+//            Console.WriteLine(" Lütfen sadece sayısal değerler giriniz! ");
+//        }
+
+//    }
+//}
+
+// Over Flow Exception
+
+//class Program
+//{
+//    static void Main(string[] args)
+//    {
+//        try
+//        {
+//            int s1, s2, crs;
+//            Console.WriteLine("Sayı : ");
+//            s1 = Convert.ToInt16(Console.ReadLine());
+//            Console.WriteLine("Sayı : ");
+//            s2 = Convert.ToInt16(Console.ReadLine());
+//            crs = s1 + s2;
+//            Console.WriteLine("Sonuc  :" + crs);
+
+//        }
+//        catch (FormatException)
+//        {
+//            Console.WriteLine(" Lütfen sadece sayısal değerler giriniz! ");
+//        }
+//        catch (OverflowException)
+//        {
+//            Console.WriteLine("Lütfen aralığı dışında değer girmeyin !");
+//        }
+
+
+//    }
+//}
+
+// Finally
+
+//class Program
+//{
+//    static void Main(string[] args)
+//    {
+//        try
+//        {
+//            int s1, s2, crs;
+//            Console.WriteLine("Sayı : ");
+//            s1 = Convert.ToInt16(Console.ReadLine());
+//            Console.WriteLine("Sayı : ");
+//            s2 = Convert.ToInt16(Console.ReadLine());
+//            crs = s1 + s2;
+//            Console.WriteLine("Sonuc  :" + crs);
+//        }
+//        catch (Exception)
+//        {
+//            Console.WriteLine("HATA");
+//        }
+//        finally 
+//        {
+//            Console.WriteLine("Burası Çalıştı.");
+//        }
+//    }
+//}
