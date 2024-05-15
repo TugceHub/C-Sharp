@@ -1,53 +1,65 @@
-﻿// Random Sınıfı
+﻿// Metin Belgesi İşlemleri
 /*
- * Kod kısımında belirlenen aralıklarda rastgele olarak tam sayı üreten sınıftıç
- * Random nesne_adı = new Random();
- * Değer aralığı : Next
+ * Çeşitli belge türlerinin ( metin belgesi, word, excel ..vb.)
+ * Dosya işlemleri sayesinde kodlar üzerşnden metin belgesi oluşturabilir, yazabilr, silebilir veya değiştirebiliriz.
+ * Dosya işlemleri aslında bşr veri tabanıdır.
  */
 
-// Random Örnek 
-
-//int sayi;
-//Random r = new Random();
-//sayi = r.Next(0, 51); // min * max -> minde yazdığın değer dahildir ancak maxta deüildir yani maksta 51 yazdık diye 51 karşımıza çıkmaz max : 50 çıkar
-//Console.WriteLine(sayi);
-
-// Random Sınıfı ile Dizi Kullanımları
-
-//int sayi, sayi2;
-//Random r = new Random();
-//sayi = r.Next(0, 51);
-//sayi2 = r.Next(0, 51);  // 2 si daima farklı gelir.
-//Console.WriteLine(sayi + " " + sayi2);
-
-// Random Sınıfında Dizi Kullanımı
-
-//Random rn = new Random();
-//int sehir;
-//string[] sehirler = { "Mersin", "İstanbul", "Sidney", "Melbourne" };
-//sehir = rn.Next(0, sehirler.Length);
-//Console.WriteLine(sehirler[sehir]);
+// Metin Belgesi işlemleri için kullandığımız kütüphane : System.IO
 
 
-// Captcha Oluşturma
-//using System.Collections.Specialized;
+// Yeni Metin Belgesi Oluşturma
+//class Program
+//{
+//    static void Main(String[] args)
+//    {
+//        StreamWriter sw = new StreamWriter("C:\\Users\\blutf\\OneDrive\\Desktop\\fatma.txt");
+//    }
+//}
 
-//int d1, d2, d3, d4;
-//Random rnd = new Random();
-//d1 = rnd.Next(0, 10);
-//d2 = rnd.Next(0, 10);
-//d3 = rnd.Next(0, 10);
-//d4 = rnd.Next(0, 10);
-//Console.WriteLine(d1);
-//Console.WriteLine(d2);
-//Console.WriteLine(d3);
-//Console.WriteLine(d4);
-//Console.WriteLine();
-//String[] karakterler = { "a", "A", "b", "B", "c", "C", "d", "D", "e", "E" };
-//Console.WriteLine(d1 + karakterler[d2] + d3 + karakterler[d4]);
+// Yeni Metin Belgesi İçine Yazı Yazma
+
+//class Program
+//{
+//    static void Main(String[] args)
+//    {
+//        StreamWriter sw = new StreamWriter("C:\\Users\\blutf\\OneDrive\\Desktop\\fatma.txt");
+//        sw.WriteLine("lorem ipsum lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum" );
+//        sw.Close();
+//    }
+//}
 
 
+// Metin Belgesi İçine Klavyeden Veri Girişi
 
+//class Program
+//{
+//    static void Main(String[] args)
+//    {
+//        StreamWriter sw = new StreamWriter("C:\\Users\\blutf\\OneDrive\\Desktop\\fatmaB2.txt");
+//        string metin;
+//        Console.WriteLine("Metini giriniz : ");
+//        metin = Console.ReadLine();
+//        sw.Write(metin);
+//        sw.Close();
+//    }
+//}
 
+// Metin Belgesini Okuma
 
+class program
+{
+    static void Main(string[] args)
+    {
+        FileStream fs = new FileStream("adres", FileMode.Open, FileAccess.Read);
+        StreamReader sr = new StreamReader(fs);
+        string metin = sr.ReadLine();
+        while (metin != null)
+        {
+            Console.WriteLine(metin);
+            metin = sr.ReadLine();
 
+        }
+        sr.Close();
+        fs.Close();
+    }
