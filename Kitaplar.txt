@@ -1,0 +1,12 @@
+ 1 - Çalıkuşu  : Reşat Nuri              
+ 2 - Yaban  : Yakup kadri                
+ 3 - Sinekli Bakkal : Halide Edip        
+ 4 - Tehlikeli Oyunlar  : O.Atay     
+ 5 - Geçtiğim Günlerden:H.Ali Yücel     
+ 6 - Kuyucaklı Yusuf : S.Ali         
+ 7 - Tuna Kılavuzu : Jul Verne       
+ 8 - Bir kuzey Macerası  : Jack London   
+ 9 - Altıncı Koğuş : Anton Çehov       
+ 10 - Kumarbaz : Dostoyevski           
+ 11 - İki Şehirin Hikayesi : C.Dickens 
+ 12 - Vişne Bahçesi : Anton Çehov      
