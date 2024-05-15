@@ -1,89 +1,53 @@
-﻿// Matematiksel Fonksiyonlar
+﻿// Random Sınıfı
 /*
- * Abs : Mutlak
- * Ceiling : Üst tabana yuvarla
- * Floor   : Alt tabana yuvarla 
- * Sqrt    : Karekök
- * Pow     : Üs alma 
- * Pi      : Pi sayısı
- * */
-
-// Math :
-//double sayi;
-//Console.WriteLine("Sayıyı giriniz :");
-//sayi = Convert.ToDouble(Console.ReadLine());
-
-//// Mutlak Değer:
-//Console.WriteLine("Mutlak Değer :" +Math.Abs(sayi));
-//// Üst taban :
-//Console.WriteLine("Üst Taban : " + Math.Ceiling(sayi));
-//// Alt Taban :
-//Console.WriteLine("Alt Taban : " + Math.Floor(sayi));
-//// Kare Kök :
-//Console.WriteLine("Karekök : " + Math.Sqrt(sayi));
-
-//String Fonksiyonlar
-/*
- * Metinsel ifadeler ile işlemler yapabilmek için kullanlır
- * Conctac    : birleştime
- * Length     : uzunluk
- * İndex of   : Metin arama
- * Starswith   : İlgili parametere ile mi başlar.
- * Toupper    : büyük harf
- * Tolower    : küçük harf
- * Remove     : İstanilen karekterden itibaren siler
- * Replace    : Değiştirme
- * Substring  : İstaneilen karakterden itibaren işlem yapar 
- * Trim       : Sağ - sol boşlukları kaldır.
+ * Kod kısımında belirlenen aralıklarda rastgele olarak tam sayı üreten sınıftıç
+ * Random nesne_adı = new Random();
+ * Değer aralığı : Next
  */
 
-// String Fonksiyon Kullanımları 1
+// Random Örnek 
 
-//string metin, metin2;
-//Console.WriteLine("Metini giriniz : ");
-//metin = Console.ReadLine();
-//Console.WriteLine("Metini giriniz : ");
-//metin2 = Console.ReadLine();
+//int sayi;
+//Random r = new Random();
+//sayi = r.Next(0, 51); // min * max -> minde yazdığın değer dahildir ancak maxta deüildir yani maksta 51 yazdık diye 51 karşımıza çıkmaz max : 50 çıkar
+//Console.WriteLine(sayi);
 
-//Console.WriteLine("Concat ile birleştirme : " + string.Concat(metin, metin2));
-//Console.WriteLine("Metin 1 için karakter sayısı : " + metin.Length);
-//Console.WriteLine("İndex of Örneği : " + metin.IndexOf("aydın")); // index 0 ise mevcut || - değer döndürür.
-//Console.WriteLine("Startswith Örneği : " + metin.StartsWith("o"));
-//Console.WriteLine("Merhaba Dünya" + metin.Trim());
-//Console.WriteLine("Büyük harf : " + metin.ToUpper());
-//Console.WriteLine("Küçük harf : " + metin.ToLower());
-//Console.WriteLine("Remove Metodu  : " + metin.Remove(5)); // index numasından sonrasını siler.
-//Console.WriteLine("Replace Fonksiyonu  : " + metin.Replace("a", "A")); // eski karakter, yeni karakter
-//Console.WriteLine("Substring Fonksiyonu : " + metin.Substring(4)); // indeks numarasından sonrasın yazar  indeks 
+// Random Sınıfı ile Dizi Kullanımları
 
-// Tarih Zaman Fonksiyonlar
-/*
- * Anahtar kelime : Datetime
- * Kullanım Şekli : DateTime.Now
- * Day, mounth, year, hour, second, ...vb.
- * Timespan : 2 tarih arasındaki farkı hesaplar.
- */
+//int sayi, sayi2;
+//Random r = new Random();
+//sayi = r.Next(0, 51);
+//sayi2 = r.Next(0, 51);  // 2 si daima farklı gelir.
+//Console.WriteLine(sayi + " " + sayi2);
+
+// Random Sınıfında Dizi Kullanımı
+
+//Random rn = new Random();
+//int sehir;
+//string[] sehirler = { "Mersin", "İstanbul", "Sidney", "Melbourne" };
+//sehir = rn.Next(0, sehirler.Length);
+//Console.WriteLine(sehirler[sehir]);
 
 
-//Console.WriteLine("Bugünün gün bilgisi : " + DateTime.Now.Day);
-//Console.WriteLine("Bugünün ay bilgisi : " + DateTime.Now.Month);
-//Console.WriteLine("Bugünün yıl bilgisi : " + DateTime.Now.Year);
-//Console.WriteLine("Bugünün saat bilgisi : " + DateTime.Now.Hour);
-//Console.WriteLine("Bugünün dk bilgisi : " + DateTime.Now.Minute);
-//Console.WriteLine("Bugünün sn bilgisi : " + DateTime.Now.Second);
-//Console.WriteLine("Bugünün kısa  bilgisi : " + DateTime.Now.ToShortDateString());
-//Console.WriteLine("Bugünün uzun  bilgisi : " + DateTime.Now.ToLongDateString());
+// Captcha Oluşturma
+//using System.Collections.Specialized;
 
-// Time Span Kullanımı
+//int d1, d2, d3, d4;
+//Random rnd = new Random();
+//d1 = rnd.Next(0, 10);
+//d2 = rnd.Next(0, 10);
+//d3 = rnd.Next(0, 10);
+//d4 = rnd.Next(0, 10);
+//Console.WriteLine(d1);
+//Console.WriteLine(d2);
+//Console.WriteLine(d3);
+//Console.WriteLine(d4);
+//Console.WriteLine();
+//String[] karakterler = { "a", "A", "b", "B", "c", "C", "d", "D", "e", "E" };
+//Console.WriteLine(d1 + karakterler[d2] + d3 + karakterler[d4]);
 
-//TimeSpan zaman;
-//int gunfarki;
-//DateTime tarih1, tarih2;
-//tarih1 = Convert.ToDateTime("20.08.1997");
-//tarih2 = DateTime.Now.Date;
-//zaman = tarih2 - tarih1;
-//gunfarki = zaman.Days;
-//Console.WriteLine(" Fark :" + gunfarki);
+
+
 
 
 
